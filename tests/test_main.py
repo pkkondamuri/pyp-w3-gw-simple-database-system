@@ -68,6 +68,7 @@ class SimpleDatabaseTestCase(unittest.TestCase):
 
         new_db = connect_database('test-db')
         self.assertEqual(new_db.show_tables(), ['authors'])
+        print (new_db.authors.columns)
         self.assertEqual(new_db.authors.count(), 1)
 
     def test_create_two_db_with_same_table(self):
